@@ -2,7 +2,7 @@
 import React from "react";
 import { IconSVGProps, icons } from "./types";
 import { dynamicStyles } from "./styles";
-import { Caret, External } from "./icons";
+import { Caret, External, Twitter, Send } from "./icons";
 import { IconStyles } from "./icons/types";
 
 const IconSVG: React.FC<IconSVGProps> = ({ icon, ...props }) => {
@@ -17,6 +17,12 @@ const IconSVG: React.FC<IconSVGProps> = ({ icon, ...props }) => {
   }
   if (icon === icons.EXTERNAL) {
     return <External {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.TWITTER) {
+    return <Twitter {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.SEND) {
+    return <Send {...props} getStyles={getStyles} />;
   }
   return null;
 };
