@@ -1,12 +1,20 @@
+/* eslint-disable react/require-default-props */
 import React from "react";
-import { Box, LinkProps, Link } from "theme-ui";
+import { Box, LinkProps, Link, ThemeUICSSObject } from "theme-ui";
 import { IconSVG } from "../IconSVG";
 
-const TooltipLink: React.FC<LinkProps> = ({ children, ...props }) => {
+interface Props extends LinkProps {
+  display?: ThemeUICSSObject["display"];
+  textAlign?: ThemeUICSSObject["textAlign"];
+}
+
+const LinkExternal: React.FC<Props> = ({ display, textAlign, children, ...props }) => {
   return (
     <Link
       sx={{
         color: "brown",
+        display,
+        textAlign,
       }}
       {...props}
       target="_blank"
@@ -19,4 +27,4 @@ const TooltipLink: React.FC<LinkProps> = ({ children, ...props }) => {
   );
 };
 
-export default TooltipLink;
+export default LinkExternal;

@@ -13,6 +13,12 @@ export default {
       options: ["light", "dark"],
       control: { type: "inline-radio" },
     },
+    variant: {
+      control: { type: "select" },
+    },
+    position: {
+      control: { type: "select" },
+    },
   },
 };
 
@@ -29,10 +35,10 @@ export const SingleText = (args: any) => (
     <TooltipBubble {...args} bottom={10}>
       <Text>Just Text. Variant 3</Text>
       <Box mt="10px">
-        <LinkExternal href="https://apeswap.finance" target="_blank">
+        <LinkExternal display="block" textAlign="center" href="https://apeswap.finance" target="_blank">
           Urlhere
         </LinkExternal>
-        <LinkExternal href="https://apeswap.finance" target="_blank">
+        <LinkExternal display="block" textAlign="center" href="https://apeswap.finance" target="_blank">
           Urlhere
         </LinkExternal>
       </Box>
@@ -52,10 +58,10 @@ export const WithLinks = (args: any) => (
         <Text>BANANA-BNB LP</Text>
       </TooltipBody>
       <Box mt="10px">
-        <LinkExternal href="https://google.com" target="_blank">
+        <LinkExternal display="block" textAlign="center" href="https://google.com" target="_blank">
           Urlhere
         </LinkExternal>
-        <LinkExternal href="https://google.com" target="_blank">
+        <LinkExternal display="block" textAlign="center" href="https://google.com" target="_blank">
           Urlhere
         </LinkExternal>
       </Box>
