@@ -14,6 +14,8 @@ const External: React.FC<IconProps> = ({ direction = "right", color = "brown", w
     color,
   });
 
+  console.log("========== style", style);
+
   return (
     <svg
       width={width || "11"}

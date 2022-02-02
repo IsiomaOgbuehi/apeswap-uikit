@@ -1,15 +1,22 @@
 import React from "react";
-import Link from "./Link";
-import { LinkProps } from "./types";
-import OpenNewIcon from "../Svg/Icons/OpenNew";
+import { Box, LinkProps, Link } from "theme-ui";
+import { IconSVG } from "../IconSVG";
 
-const LinkExternal: React.FC<LinkProps> = ({ children, ...props }) => {
+const TooltipLink: React.FC<LinkProps> = ({ children, ...props }) => {
   return (
-    <Link external {...props}>
+    <Link
+      sx={{
+        color: "brown",
+      }}
+      {...props}
+      target="_blank"
+    >
       {children}
-      <OpenNewIcon color="primary" ml="4px" />
+      <Box as="span" sx={{ marginLeft: 2 }}>
+        <IconSVG icon="external" color="brown" />
+      </Box>
     </Link>
   );
 };
 
-export default LinkExternal;
+export default TooltipLink;
