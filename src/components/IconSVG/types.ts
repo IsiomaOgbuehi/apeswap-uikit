@@ -5,6 +5,8 @@ export enum icons {
   EXTERNAL = "external",
   TWITTER = "twitter",
   SEND = "send",
+  ERROR = "error",
+  CLOSE = "close",
 }
 
 export enum directions {

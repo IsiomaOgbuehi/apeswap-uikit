@@ -24,7 +24,7 @@ export default {
   },
 };
 
-export const Default: React.FC = () => {
+export const Default = () => {
   return (
     <div>
       <div>

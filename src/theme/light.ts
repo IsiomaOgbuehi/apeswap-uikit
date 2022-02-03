@@ -1,5 +1,4 @@
 import { DefaultTheme } from "styled-components";
-import { light as lightAlert } from "../components/Alert/theme";
 import { light as lightRadio } from "../components/Radio/theme";
 import { light as lightToggle } from "../components/Toggle/theme";
 import { light as lightNav } from "../widgets/Menu/theme";
@@ -10,7 +9,7 @@ import { lightColors } from "./colors";
 const lightTheme: DefaultTheme = {
   ...base,
   isDark: false,
-  alert: lightAlert,
+  alert: {},
   colors: lightColors,
   toggle: lightToggle,
   nav: lightNav,

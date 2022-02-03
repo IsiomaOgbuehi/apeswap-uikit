@@ -10,9 +10,11 @@ const IconButton: React.FC<IconButtonProps> = ({
   icon = icons.SEND,
   color = colorValues.white1,
   variant = variants.PRIMARY,
+  ...props
 }) => {
   return (
     <Button
+      {...props}
       sx={variant === variants.TRANSPARENT ? style.transparent : { variant: `buttons.${variant}`, ...style.default }}
     >
       <IconSVG color={color} icon={icon} />

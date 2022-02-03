@@ -20,7 +20,7 @@ const LinkExternal: React.FC<Props> = ({ display, textAlign, children, ...props 
       target="_blank"
     >
       {children}
-      <Box as="span" sx={{ marginLeft: 2 }}>
+      <Box as="span" sx={{ marginLeft: 2, verticalAlign: "middle" }}>
         <IconSVG icon="external" color="brown" />
       </Box>
     </Link>

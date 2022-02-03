@@ -2,7 +2,7 @@
 import React from "react";
 import { IconSVGProps, icons } from "./types";
 import { dynamicStyles } from "./styles";
-import { Caret, External, Twitter, Send } from "./icons";
+import { Caret, External, Twitter, Send, Error, Close } from "./icons";
 import { IconStyles } from "./icons/types";
 
 const IconSVG: React.FC<IconSVGProps> = ({ icon, ...props }) => {
@@ -23,6 +23,12 @@ const IconSVG: React.FC<IconSVGProps> = ({ icon, ...props }) => {
   }
   if (icon === icons.SEND) {
     return <Send {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.ERROR) {
+    return <Error {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.CLOSE) {
+    return <Close {...props} getStyles={getStyles} />;
   }
   return null;
 };
