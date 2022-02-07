@@ -1,18 +1,17 @@
+import React, { ReactNode } from "react";
 import { BoxProps } from "theme-ui";
 
-export enum variants {
-  DEFAULT = "default",
-  TEXTONLY = "textOnly",
+export enum placements {
+  TOPRIGHT = "topRight",
+  TOPLEFT = "topLeft",
+  BOTTOMRIGHT = "bottomRight",
+  BOTTOMLEFT = "bottomLeft",
 }
 
-export type variantProps = `${variants}`;
+export type placementProps = `${placements}`;
 
 export interface TooltipProps extends BoxProps {
-  variant?: variantProps;
-  maxWidth?: string;
-  position?: "fixed" | "absolute";
-  top?: string;
-  bottom?: string;
-  right?: string;
-  left?: string;
+  width?: string;
+  placement?: placementProps;
+  body: ReactNode;
 }

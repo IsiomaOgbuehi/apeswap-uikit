@@ -1,5 +1,7 @@
 import React from "react";
-import { Text, Box } from "theme-ui";
+import { Box } from "theme-ui";
+import { Text } from "../Text";
+import { Button } from "../Button";
 import TooltipBubble from "./TooltipBubble";
 import StorybookLayout from "../StorybookLayout/StorybookLayout";
 import { LinkExternal } from "../Link";
@@ -16,24 +18,29 @@ export default {
     variant: {
       control: { type: "select" },
     },
-    position: {
+    placement: {
       control: { type: "select" },
+      defaultValue: "bottomRight",
     },
   },
 };
 
-export const JustText = (args: any) => (
-  <StorybookLayout {...args}>
-    <TooltipBubble {...args} variant="textOnly" right={0}>
-      <Text>Just Text. Variant 4</Text>
-    </TooltipBubble>
-  </StorybookLayout>
-);
+export const JustText = (args: any) => {
+  const body = <Text variant="sm">Just Text. Variant 4</Text>;
 
-export const SingleText = (args: any) => (
-  <StorybookLayout {...args}>
-    <TooltipBubble {...args} bottom={10}>
-      <Text>Just Text. Variant 3</Text>
+  return (
+    <StorybookLayout {...args}>
+      <TooltipBubble {...args} body={body}>
+        <Button variant="secondary">Just Text. Variant 4</Button>
+      </TooltipBubble>
+    </StorybookLayout>
+  );
+};
+
+export const SingleText = (args: any) => {
+  const body = (
+    <>
+      <Text variant="sm">Just Text. Variant 3</Text>
       <Box mt="10px">
         <LinkExternal display="block" textAlign="center" href="https://apeswap.finance" target="_blank">
           Urlhere
@@ -42,20 +49,28 @@ export const SingleText = (args: any) => (
           Urlhere
         </LinkExternal>
       </Box>
-    </TooltipBubble>
-  </StorybookLayout>
-);
+    </>
+  );
 
-export const WithLinks = (args: any) => (
-  <StorybookLayout {...args}>
-    <TooltipBubble {...args} bottom={10} right={0}>
+  return (
+    <StorybookLayout {...args}>
+      <TooltipBubble {...args} body={body}>
+        <Button variant="secondary">Just Text. Variant 3</Button>
+      </TooltipBubble>
+    </StorybookLayout>
+  );
+};
+
+export const WithLinks = (args: any) => {
+  const body = (
+    <>
       <TooltipBody>
-        <Text>Multiplier Var 2:</Text>
-        <Text>X35</Text>
+        <Text variant="sm">Multiplier Var 2:</Text>
+        <Text variant="sm">X35</Text>
       </TooltipBody>
       <TooltipBody>
-        <Text>Stake:</Text>
-        <Text>BANANA-BNB LP</Text>
+        <Text variant="sm">Stake:</Text>
+        <Text variant="sm">BANANA-BNB LP</Text>
       </TooltipBody>
       <Box mt="10px">
         <LinkExternal display="block" textAlign="center" href="https://google.com" target="_blank">
@@ -65,21 +80,37 @@ export const WithLinks = (args: any) => (
           Urlhere
         </LinkExternal>
       </Box>
-    </TooltipBubble>
-  </StorybookLayout>
-);
+    </>
+  );
 
-export const WithoutLinks = (args: any) => (
-  <StorybookLayout {...args}>
-    <TooltipBubble {...args}>
+  return (
+    <StorybookLayout {...args}>
+      <TooltipBubble {...args} body={body}>
+        <Button variant="secondary">WithLinks</Button>
+      </TooltipBubble>
+    </StorybookLayout>
+  );
+};
+
+export const WithoutLinks = (args: any) => {
+  const body = (
+    <>
       <TooltipBody>
-        <Text>Multiplier Var 1:</Text>
-        <Text>X35</Text>
+        <Text variant="sm">Multiplier Var 1:</Text>
+        <Text variant="sm">X35</Text>
       </TooltipBody>
       <TooltipBody>
-        <Text>Stake:</Text>
-        <Text>BANANA-BNB LP</Text>
+        <Text variant="sm">Stake:</Text>
+        <Text variant="sm">BANANA-BNB LP</Text>
       </TooltipBody>
-    </TooltipBubble>
-  </StorybookLayout>
-);
+    </>
+  );
+
+  return (
+    <StorybookLayout {...args}>
+      <TooltipBubble {...args} body={body}>
+        <Button variant="secondary">WithoutLinks</Button>
+      </TooltipBubble>
+    </StorybookLayout>
+  );
+};

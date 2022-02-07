@@ -64,10 +64,10 @@ export const Default = (args: any) => {
         <div sx={styles.base}>
           <div sx={styles.styled}>
             <Button>MAX</Button>
-            <Box>
+            <div sx={{ textAlign: "right" }}>
               <Heading as="h3">100.33</Heading>
               <Text>~$607.34455</Text>
-            </Box>
+            </div>
           </div>
           <div sx={styles.default}>
             <Heading as="h5">BANANA</Heading>

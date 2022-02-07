@@ -1,32 +1,80 @@
-import React from "react";
+/* eslint-disable consistent-return */
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Box } from "theme-ui";
-import { TooltipProps, variants } from "./TooltipBubble.interface";
+import { TooltipProps, placements } from "./TooltipBubble.interface";
 import style from "./styles";
 
 const TooltipBubble: React.FC<TooltipProps> = ({
-  variant = variants.DEFAULT,
-  maxWidth = "250px",
-  position = "fixed",
-  top,
-  left,
-  right,
-  bottom,
+  width = "232px",
+  placement = placements.BOTTOMRIGHT,
+  body,
   children,
 }) => {
+  const bodyRef = useRef<HTMLDivElement>(null);
+  const [styles, setStyles] = useState({});
+
+  const getStyles = useCallback(() => {
+    const right = bodyRef?.current?.getBoundingClientRect().width;
+
+    switch (placement) {
+      case placements.BOTTOMLEFT: {
+        return {
+          bottom: 0,
+          transform: "translate(0, 100%)",
+        };
+      }
+      case placements.BOTTOMRIGHT: {
+        return {
+          bottom: 0,
+          transform: `translate(calc(${right}px - ${width}), 100%)`,
+        };
+      }
+      case placements.TOPLEFT: {
+        return {
+          top: 0,
+          transform: "translate(0, -100%)",
+        };
+      }
+      case placements.TOPRIGHT: {
+        return {
+          top: 0,
+          transform: `translate(calc(${right}px - ${width}), -100%)`,
+        };
+      }
+      default: {
+        return {};
+      }
+    }
+  }, [width, placement]);
+
+  useEffect(() => {
+    if (bodyRef) {
+      setStyles(getStyles());
+    }
+  }, [bodyRef, getStyles, width, placement]);
+
   return (
-    <Box
-      sx={{
-        maxWidth,
-        position,
-        top,
-        left,
-        right,
-        bottom,
-        ...style[variant],
-        ...style.bottomRight,
-      }}
-    >
-      {children}
+    <Box sx={style.container}>
+      <Box
+        sx={{
+          position: "absolute",
+          width,
+          ...styles,
+        }}
+      >
+        <Box
+          sx={{
+            position: "relative",
+            ...style.default,
+            ...style[placement],
+          }}
+        >
+          {body}
+        </Box>
+      </Box>
+      <Box ref={bodyRef} sx={{ width: "fit-content" }}>
+        {children}
+      </Box>
     </Box>
   );
 };
