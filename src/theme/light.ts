@@ -10,7 +10,6 @@ const lightTheme: DefaultTheme = {
   colors: lightColors,
   toggle: lightToggle,
   nav: lightNav,
-  radio: {} as any,
 };
 
 export default lightTheme;

@@ -9,7 +9,7 @@ const List: React.FC = ({ children }) => {
         "li:nth-type(odd)": {
           background: "white4",
         },
-        "li:nth-child(even)": {
+        "li:nth-of-type(even)": {
           background: "white3",
         },
       }}

@@ -1,4 +1,3 @@
-import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
 import { NavTheme } from "../widgets/Menu/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices, FontFamily } from "./types";
@@ -9,7 +8,6 @@ export interface ApeSwapTheme {
   colors: Colors;
   fontFamily: FontFamily;
   nav: NavTheme;
-  radio: RadioTheme;
   toggle: ToggleTheme;
   breakpoints: Breakpoints;
   mediaQueries: MediaQueries;

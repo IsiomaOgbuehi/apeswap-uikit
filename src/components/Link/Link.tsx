@@ -3,7 +3,7 @@ import styled from "styled-components";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import Text from "../Text/Text";
 import { LinkProps } from "./types";
-import { LinkExternal } from ".";
+import LinkExternal from "./LinkExternal";
 
 const StyledLink = styled(Text)<LinkProps>`
   display: flex;

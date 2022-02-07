@@ -10,7 +10,6 @@ const darkTheme: DefaultTheme = {
   colors: darkColors,
   toggle: darkToggle,
   nav: darkNav,
-  radio: {} as any,
 };
 
 export default darkTheme;

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useCallback, useContext, useEffect } from "react";
 import styled from "styled-components";
 import Heading from "../../components/Heading/Heading";
 import Flex from "../../components/Flex/Flex";
 import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
-import { InjectedProps } from "./types";
+import { InjectedProps, Handler } from "./types";
+import { Context } from "./ModalContext";
 
 interface Props extends InjectedProps {
   title: string;
@@ -14,7 +15,7 @@ interface Props extends InjectedProps {
 }
 
 const StyledModal = styled.div`
-  background: ${({ theme }) => theme.modal.background};
+  background: ${({ theme }) => theme.colors.card};
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 32px;
@@ -55,16 +56,14 @@ const Modal: React.FC<Props> = ({
     <ModalHeader>
       <ModalTitle>
         {onBack && (
-          <IconButton variant="text" onClick={onBack} area-label="go back" mr="8px">
+          <IconButton variant="primary" onClick={onBack} area-label="go back" mr="8px">
             <ArrowBackIcon color="primary" />
           </IconButton>
         )}
-        <Heading fontFamily="Titan One">{title}</Heading>
+        <Heading>{title}</Heading>
       </ModalTitle>
       {!hideCloseButton && (
-        <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
-          <CloseIcon color="primary" />
-        </IconButton>
+        <IconButton variant="primary" icon="close" onClick={onDismiss} aria-label="Close the dialog" />
       )}
     </ModalHeader>
     <Flex flexDirection="column" p={bodyPadding}>
@@ -80,3 +79,16 @@ Modal.defaultProps = {
 };
 
 export default Modal;
+
+export const useModal = (modal: React.ReactNode, closeOnOverlayClick = true): [Handler, Handler] => {
+  const { onPresent, onDismiss, setCloseOnOverlayClick } = useContext(Context);
+  const onPresentCallback = useCallback(() => {
+    onPresent(modal);
+  }, [modal, onPresent]);
+
+  useEffect(() => {
+    setCloseOnOverlayClick(closeOnOverlayClick);
+  }, [closeOnOverlayClick, setCloseOnOverlayClick]);
+
+  return [onPresentCallback, onDismiss];
+};
