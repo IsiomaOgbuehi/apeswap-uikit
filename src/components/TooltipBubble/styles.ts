@@ -69,10 +69,11 @@ const after = {
 
 const styles: Record<string, ThemeUIStyleObject> = {
   container: {
-    "div:first-of-type": {
+    width: "232px",
+    "& > div:first-of-type": {
       display: "none",
     },
-    "&:hover div:first-of-type": {
+    "&:hover > div:first-of-type": {
       display: "block",
     },
   },

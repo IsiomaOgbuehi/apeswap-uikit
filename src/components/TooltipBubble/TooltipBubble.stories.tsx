@@ -86,7 +86,7 @@ export const WithLinks = (args: any) => {
   return (
     <StorybookLayout {...args}>
       <TooltipBubble {...args} body={body}>
-        <Button variant="secondary">WithLinks</Button>
+        <Button variant="secondary">WithLinks Longer stuff</Button>
       </TooltipBubble>
     </StorybookLayout>
   );
