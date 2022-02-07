@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Box } from "theme-ui";
 import { Text } from "../Text";
 import { Button } from "../Button";
@@ -15,9 +15,6 @@ export default {
       options: ["light", "dark"],
       control: { type: "inline-radio" },
     },
-    variant: {
-      control: { type: "select" },
-    },
     placement: {
       control: { type: "select" },
       defaultValue: "bottomRight",
@@ -26,12 +23,15 @@ export default {
 };
 
 export const JustText = (args: any) => {
+  const buttonRef = useRef();
   const body = <Text variant="sm">Just Text. Variant 4</Text>;
 
   return (
     <StorybookLayout {...args}>
-      <TooltipBubble {...args} body={body}>
-        <Button variant="secondary">Just Text. Variant 4</Button>
+      <TooltipBubble ref={buttonRef} {...args} body={body}>
+        <Button ref={buttonRef} variant="secondary">
+          Just Text. Variant 4
+        </Button>
       </TooltipBubble>
     </StorybookLayout>
   );

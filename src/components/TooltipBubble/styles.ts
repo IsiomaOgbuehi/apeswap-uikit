@@ -70,7 +70,7 @@ const after = {
 const styles: Record<string, ThemeUIStyleObject> = {
   container: {
     "div:first-of-type": {
-      display: "block",
+      display: "none",
     },
     "&:hover div:first-of-type": {
       display: "block",
