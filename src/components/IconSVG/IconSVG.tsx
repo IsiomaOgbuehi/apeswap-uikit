@@ -5,6 +5,19 @@ import { dynamicStyles } from "./styles";
 import {
   Caret,
   External,
+  Home,
+  Calculator,
+  Farm,
+  Frame,
+  Gnana,
+  Info,
+  More,
+  NFA,
+  Pool,
+  Rocket,
+  Trade,
+  Vault,
+  Ellipse,
   Twitter,
   Send,
   Error,
@@ -35,17 +48,44 @@ const IconSVG: React.FC<IconSVGProps> = ({ icon, ...props }) => {
   if (icon === icons.EXTERNAL) {
     return <External {...props} getStyles={getStyles} />;
   }
-  if (icon === icons.TWITTER) {
-    return <Twitter {...props} getStyles={getStyles} />;
+  if (icon === icons.HOME) {
+    return <Home {...props} getStyles={getStyles} />;
   }
-  if (icon === icons.SEND) {
-    return <Send {...props} getStyles={getStyles} />;
+  if (icon === icons.CALCULATOR) {
+    return <Calculator {...props} getStyles={getStyles} />;
   }
-  if (icon === icons.ERROR) {
-    return <Error {...props} getStyles={getStyles} />;
+  if (icon === icons.FARM) {
+    return <Farm {...props} getStyles={getStyles} />;
   }
-  if (icon === icons.CLOSE) {
-    return <Close {...props} getStyles={getStyles} />;
+  if (icon === icons.FRAME) {
+    return <Frame {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.GNANA) {
+    return <Gnana {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.INFO) {
+    return <Info {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.MORE) {
+    return <More {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.NFA) {
+    return <NFA {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.POOL) {
+    return <Pool {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.ROCKET) {
+    return <Rocket {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.TRADE) {
+    return <Trade {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.VAULT) {
+    return <Vault {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.ELLIPSE) {
+    return <Ellipse {...props} getStyles={getStyles} />;
   }
   if (icon === icons.COLLAPSE) {
     return <Collapse {...props} getStyles={getStyles} />;
@@ -73,6 +113,18 @@ const IconSVG: React.FC<IconSVGProps> = ({ icon, ...props }) => {
   }
   if (icon === icons.HAMBURGER) {
     return <Hamburger {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.TWITTER) {
+    return <Twitter {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.SEND) {
+    return <Send {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.ERROR) {
+    return <Error {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.CLOSE) {
+    return <Close {...props} getStyles={getStyles} />;
   }
   if (icon === icons.SEARCH) {
     return <Search {...props} getStyles={getStyles} />;

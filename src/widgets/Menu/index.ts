@@ -1,3 +1,6 @@
 export { default as Menu } from "./Menu";
-export { links as menuConfig } from "./config";
-export type { NavProps, LangType, MenuEntry } from "./types";
+export { default as MenuBody } from "./MenuBody";
+export { default as MenuLink } from "./MenuLink";
+export { default as MenuFooter } from "./MenuFooter";
+
+export type { MenuProps, MenuContextProps, MenuItem, LinkProps } from "./types";
