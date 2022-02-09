@@ -1,20 +1,20 @@
 import React from "react";
 import { renderWithTheme } from "../../testHelpers";
-import { Dropdown, DropdownItem } from "../../components/Dropdown";
+import { Select, SelectItem } from "../../components/Select";
 
 it("renders correctly", () => {
   const { asFragment } = renderWithTheme(
-    <Dropdown component={<></>}>
-      <DropdownItem>Dropdown</DropdownItem>
-    </Dropdown>
+    <Select>
+      <SelectItem value={0}>Dropdown</SelectItem>
+    </Select>
   );
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="css-185otsa"
+        class="css-6wk3vq-Select css-vurnku"
       >
         <div
-          class="css-1t832xr"
+          class="css-1xioqei-Select css-4cffwv"
         >
           <svg
             class="css-1ka1d7c-Caret"
@@ -30,6 +30,19 @@ it("renders correctly", () => {
             />
           </svg>
         </div>
+        <ul
+          class="css-1pzy3gd-Select"
+        >
+          <li
+            class="css-8wxctm-SelectItem css-vurnku"
+          >
+            <div
+              class="css-d6psg9-SelectItem css-vurnku"
+            >
+              Dropdown
+            </div>
+          </li>
+        </ul>
       </div>
     </DocumentFragment>
   `);

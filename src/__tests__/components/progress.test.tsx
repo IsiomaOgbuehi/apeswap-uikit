@@ -3,7 +3,7 @@ import { renderWithTheme } from "../../testHelpers";
 import Progress from "../../components/Progress/Progress";
 
 it("renders correctly", () => {
-  const { asFragment } = renderWithTheme(<Progress primaryStep={50} />);
+  const { asFragment } = renderWithTheme(<Progress />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
