@@ -24,6 +24,7 @@ enum colorValues {
   white2 = "white2",
   white3 = "white3",
   white4 = "white4",
+  navMenuLogo = "navMenuLogo",
 }
 
 export type colorProps = `${colorValues}`;
