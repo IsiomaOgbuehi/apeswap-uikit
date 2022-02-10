@@ -222,6 +222,17 @@ const Apeswap: Theme = {
         color: "secondaryButtonDisableColor",
       },
     },
+    circular: {
+      width: "40px",
+      height: "40px",
+      background: "white3",
+      borderRadius: "50%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "end",
+      overflow: "hidden",
+      cursor: "pointer",
+    },
   },
   cards: {
     primary: {

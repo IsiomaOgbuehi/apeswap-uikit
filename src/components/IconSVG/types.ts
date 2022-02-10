@@ -7,6 +7,15 @@ export enum icons {
   SEND = "send",
   ERROR = "error",
   CLOSE = "close",
+  COLLAPSE = "collapse",
+  TEXTLOGO = "textLogo",
+  PROFILELIGHT = "profileLight",
+  PROFILEDARK = "profileDark",
+  PROFILEICON = "profileIcon",
+  POLYGON = "polygon",
+  BSC = "bsc",
+  LOGO = "logo",
+  HAMBURGER = "hamburger",
 }
 
 export enum directions {
