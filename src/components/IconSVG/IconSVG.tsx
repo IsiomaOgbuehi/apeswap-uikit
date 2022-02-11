@@ -18,6 +18,7 @@ import {
   BSC,
   Logo,
   Hamburger,
+  Search,
 } from "./icons";
 import { IconStyles } from "./icons/types";
 
@@ -72,6 +73,9 @@ const IconSVG: React.FC<IconSVGProps> = ({ icon, ...props }) => {
   }
   if (icon === icons.HAMBURGER) {
     return <Hamburger {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.SEARCH) {
+    return <Search {...props} getStyles={getStyles} />;
   }
   return null;
 };
