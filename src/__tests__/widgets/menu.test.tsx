@@ -806,7 +806,7 @@ it("renders correctly", () => {
               class="sc-kEjbQP gTEDHa"
             >
               <button
-                class="css-8aarw9"
+                class="css-1y886yb"
               >
                 <svg
                   class="css-4mlu5r-Send"

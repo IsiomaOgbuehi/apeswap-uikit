@@ -8,12 +8,15 @@ it("renders correctly", () => {
   const { asFragment } = renderWithTheme(<Input type="text" value="input" onChange={handleChange} />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
-      <input
-        class="sc-bdfBQB kIXVxV"
-        scale="md"
-        type="text"
-        value="input"
-      />
+      <div
+        class="css-1u137ur"
+      >
+        <input
+          class="css-f4fjy6"
+          type="text"
+          value="input"
+        />
+      </div>
     </DocumentFragment>
   `);
 });

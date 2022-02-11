@@ -16,6 +16,7 @@ export enum icons {
   BSC = "bsc",
   LOGO = "logo",
   HAMBURGER = "hamburger",
+  SEARCH = "search",
 }
 
 export enum directions {
@@ -25,7 +26,7 @@ export enum directions {
   DOWN = "down",
 }
 
-type iconTypes = `${icons}`;
+export type iconTypes = `${icons}`;
 type directionTypes = `${directions}`;
 
 export interface IconSVGProps {

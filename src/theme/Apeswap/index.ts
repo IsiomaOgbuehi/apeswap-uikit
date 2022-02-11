@@ -84,6 +84,26 @@ const Apeswap: Theme = {
     },
   },
   forms: {
+    input: {
+      sm: {
+        background: "white3",
+        borderRadius: 10,
+        height: "32px",
+        width: "200px",
+      },
+      md: {
+        background: "white3",
+        borderRadius: 10,
+        height: "36px",
+        width: "200px",
+      },
+      lg: {
+        background: "white3",
+        borderRadius: 14,
+        height: "48px",
+        width: "200px",
+      },
+    },
     textarea: {
       padding: "10px 13px 10px 10px",
       borderRadius: "normal",

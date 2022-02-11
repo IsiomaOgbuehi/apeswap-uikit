@@ -48,7 +48,7 @@ it("renders ConnectModal correctly", () => {
           class="css-fdh3q8"
         >
           <button
-            class="css-e67sgf"
+            class="css-cx2c6u"
             font-family="poppins"
             id="wallet-connect-metamask"
             style="justify-content: space-between;"
@@ -191,7 +191,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-e67sgf"
+            class="css-cx2c6u"
             font-family="poppins"
             id="wallet-connect-trustwallet"
             style="justify-content: space-between;"
@@ -235,7 +235,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-e67sgf"
+            class="css-cx2c6u"
             font-family="poppins"
             id="wallet-connect-walletconnect"
             style="justify-content: space-between;"
@@ -264,7 +264,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-e67sgf"
+            class="css-cx2c6u"
             font-family="poppins"
             id="wallet-connect-tokenpocket"
             style="justify-content: space-between;"
@@ -299,7 +299,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-e67sgf"
+            class="css-cx2c6u"
             font-family="poppins"
             id="wallet-connect-safepal wallet"
             style="justify-content: space-between;"
@@ -330,7 +330,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-e67sgf"
+            class="css-cx2c6u"
             font-family="poppins"
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
@@ -395,7 +395,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-e67sgf"
+            class="css-cx2c6u"
             font-family="poppins"
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
@@ -428,7 +428,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-e67sgf"
+            class="css-cx2c6u"
             font-family="poppins"
             id="wallet-connect-onto wallet"
             style="justify-content: space-between;"
@@ -480,7 +480,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-e67sgf"
+            class="css-cx2c6u"
             font-family="poppins"
             id="wallet-connect-nabox wallet"
             style="justify-content: space-between;"
@@ -527,7 +527,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-zcomk7"
+            class="css-2pfuf8"
             font-family="poppins"
             id="wallet-connect-coinbase wallet"
             style="justify-content: space-between;"

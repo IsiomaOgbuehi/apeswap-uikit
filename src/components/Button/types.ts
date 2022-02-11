@@ -1,5 +1,5 @@
 import { ButtonProps as ThemeUIButtonProps } from "theme-ui";
-import { IconSVGProps } from "../IconSVG";
+import { iconTypes } from "../IconSVG/types";
 import { colorProps } from "../../theme/Apeswap/types";
 
 export enum sizes {
@@ -44,5 +44,5 @@ export interface ButtonProps extends ThemeUIButtonProps {
 export interface IconButtonProps extends Omit<ButtonProps, "variant"> {
   variant?: iconButtonVariantsProps;
   color?: colorProps;
-  icon?: IconSVGProps["icon"];
+  icon?: iconTypes;
 }
