@@ -11,6 +11,7 @@ export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> =
     path: {
       fill: "currentcolor",
     },
+    transition: "transform .3s linear",
   }),
 };
 

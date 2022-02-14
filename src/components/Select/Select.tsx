@@ -1,6 +1,7 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from "react";
 import { Box, Flex } from "theme-ui";
+import { AnimatePresence, motion } from "framer-motion";
 import { SelectProps, selectPadding, sizes, positions } from "./types";
 import { IconSVG } from "../IconSVG";
 import styles from "./styles";
@@ -31,17 +32,24 @@ const Select: React.FC<SelectProps> = ({ children, active, size = sizes.MEDIUM, 
           })}
           <IconSVG icon="caret" direction={open ? "up" : "down"} />
         </Flex>
-        <ul
-          sx={{
-            ...styles.ul,
-            zIndex: 10,
-            top: position === positions.BOTTOM ? 5 : undefined,
-            bottom: position === positions.TOP ? 5 : undefined,
-            display: open ? "block" : "none",
-          }}
-        >
-          {children}
-        </ul>
+        <AnimatePresence>
+          {open && (
+            <motion.ul
+              initial={{ opacity: 0, transform: "scale(0.1)" }}
+              animate={{ opacity: 1, transform: "scale(1.0)" }}
+              transition={{ opacity: { duration: 0.2 } }}
+              exit={{ opacity: 0, transform: "scale(0)" }}
+              sx={{
+                ...styles.ul,
+                zIndex: 10,
+                top: position === positions.BOTTOM ? 5 : undefined,
+                bottom: position === positions.TOP ? 5 : undefined,
+              }}
+            >
+              {children}
+            </motion.ul>
+          )}
+        </AnimatePresence>
       </Box>
       {open && <div aria-hidden="true" onClick={() => setOpen(false)} sx={styles.backdrop} />}
     </>

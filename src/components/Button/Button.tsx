@@ -12,6 +12,10 @@ const Button: React.FC<ButtonProps> = ({ variant = variants.PRIMARY, sx, size = 
         fontSize: buttonFontSizes[size],
         px: buttonPadding[size].x,
         py: buttonPadding[size].y,
+        transition: "filter .3s filter",
+        "&:hover": {
+          filter: "brightness(85%)",
+        },
       }}
     >
       {children}
