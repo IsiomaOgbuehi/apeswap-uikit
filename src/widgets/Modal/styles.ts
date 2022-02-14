@@ -15,9 +15,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    transition: "all 1s ease",
   },
-  anim: { transition: "all 1s ease" },
   backdrop: {
     position: "fixed",
     top: 0,

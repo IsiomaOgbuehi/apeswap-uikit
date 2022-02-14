@@ -1,5 +1,7 @@
+/** @jsxImportSource theme-ui */
 import React, { useState } from "react";
 import { Box, Flex } from "theme-ui";
+import { AnimatePresence, motion } from "framer-motion";
 import { DropdownProps, dropdownPadding, fontSizes, sizes } from "./types";
 import { IconSVG } from "../IconSVG";
 
@@ -14,6 +16,7 @@ const Dropdown: React.FC<DropdownProps> = ({ component, children, size = sizes.M
         background: "lvl1",
         borderRadius: "10px",
         cursor: "pointer",
+        position: "relative",
       }}
       onClick={handleClick}
     >
@@ -31,7 +34,27 @@ const Dropdown: React.FC<DropdownProps> = ({ component, children, size = sizes.M
         {component}
         <IconSVG icon="caret" direction={open ? "up" : "down"} />
       </Flex>
-      {open && <ul>{children}</ul>}
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            initial={{ height: "10px" }}
+            animate={{ height: "fit-content" }}
+            exit={{ height: "0px" }}
+            sx={{
+              position: "absolute",
+              background: "lvl1",
+              width: "100%",
+              borderBottomRightRadius: "10px",
+              borderBottomLeftRadius: "10px",
+              overflow: "hidden",
+              paddingTop: "5px",
+              top: "85%",
+            }}
+          >
+            {children}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </Box>
   );
 };

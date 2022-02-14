@@ -1,5 +1,7 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
 import { Box, Flex } from "theme-ui";
+import { motion } from "framer-motion";
 import styles from "./styles";
 import { IconButton } from "../Button";
 import { Text } from "../Text";
@@ -9,7 +11,13 @@ import { IconSVG } from "../IconSVG";
 
 const Alert: React.FC<AlertProps> = ({ variant = variants.ERROR, text, linkText, url, size, onClose }) => {
   return (
-    <Flex sx={styles.alert}>
+    <motion.div
+      initial={{ right: "-250px" }}
+      animate={{ right: "10px" }}
+      transition={{ duration: 0.5 }}
+      exit={{ right: "-250px" }}
+      sx={styles.alert}
+    >
       <Flex>
         <IconSVG icon="error" color={variant} />
       </Flex>
@@ -29,7 +37,7 @@ const Alert: React.FC<AlertProps> = ({ variant = variants.ERROR, text, linkText,
       <Box>
         <IconButton icon="close" variant="transparent" color="brown" onClick={onClose} />
       </Box>
-    </Flex>
+    </motion.div>
   );
 };
 

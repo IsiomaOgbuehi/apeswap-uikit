@@ -3,6 +3,7 @@ import { ThemeUIStyleObject } from "theme-ui";
 const styles: Record<string, ThemeUIStyleObject> = {
   alert: {
     position: "fixed",
+    display: "flex",
     width: "250px",
     background: "navbar",
     borderRadius: "10px",
@@ -11,7 +12,6 @@ const styles: Record<string, ThemeUIStyleObject> = {
     pr: 6,
     minHeight: "90px",
     columnGap: "11px",
-    right: 10,
     top: 16,
   },
   content: {
