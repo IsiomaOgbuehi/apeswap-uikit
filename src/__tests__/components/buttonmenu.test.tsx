@@ -18,12 +18,12 @@ it("renders correctly", () => {
         class="sc-bdfBQB ekFJNm"
       >
         <div
-          class="css-xdp6dn"
+          class="css-1ukkhjs"
         >
           Item 1
         </div>
         <div
-          class="sc-gsTEea cgJgWb css-xdp6dn"
+          class="sc-gsTEea iwPuPn css-1dr1na7"
         >
           Item 2
         </div>

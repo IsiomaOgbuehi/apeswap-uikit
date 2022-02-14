@@ -16,7 +16,7 @@ it("renders correctly", () => {
             class="css-1y886yb"
           >
             <svg
-              class="css-5iy1dn-Collapse"
+              class="css-135epbw-Collapse"
               fill="none"
               height="auto"
               viewBox="0 0 23 16"
@@ -236,7 +236,7 @@ it("renders correctly", () => {
           class="css-91w6hk"
         >
           <button
-            class="css-xdp6dn"
+            class="css-1dr1na7"
           >
             CONNECT
           </button>

@@ -17,7 +17,7 @@ it("renders correctly", () => {
           class="css-1xioqei-Select css-4cffwv"
         >
           <svg
-            class="css-1ka1d7c-Caret"
+            class="css-1qfiwdz-Caret"
             fill="none"
             height="auto"
             viewBox="0 0 10 8"
@@ -30,19 +30,6 @@ it("renders correctly", () => {
             />
           </svg>
         </div>
-        <ul
-          class="css-1pzy3gd-Select"
-        >
-          <li
-            class="css-8wxctm-SelectItem css-vurnku"
-          >
-            <div
-              class="css-d6psg9-SelectItem css-vurnku"
-            >
-              Dropdown
-            </div>
-          </li>
-        </ul>
       </div>
     </DocumentFragment>
   `);

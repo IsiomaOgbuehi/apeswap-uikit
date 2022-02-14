@@ -28,7 +28,7 @@ it("renders ConnectModal correctly", () => {
             class="css-ej7vhs"
           >
             <svg
-              class="css-zmuhgg-Close"
+              class="css-14tbbt8-Close"
               fill="none"
               height="12"
               viewBox="0 0 12 12"
@@ -48,7 +48,7 @@ it("renders ConnectModal correctly", () => {
           class="css-fdh3q8"
         >
           <button
-            class="css-cx2c6u"
+            class="css-luwosv"
             font-family="poppins"
             id="wallet-connect-metamask"
             style="justify-content: space-between;"
@@ -191,7 +191,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-cx2c6u"
+            class="css-luwosv"
             font-family="poppins"
             id="wallet-connect-trustwallet"
             style="justify-content: space-between;"
@@ -235,7 +235,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-cx2c6u"
+            class="css-luwosv"
             font-family="poppins"
             id="wallet-connect-walletconnect"
             style="justify-content: space-between;"
@@ -264,7 +264,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-cx2c6u"
+            class="css-luwosv"
             font-family="poppins"
             id="wallet-connect-tokenpocket"
             style="justify-content: space-between;"
@@ -299,7 +299,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-cx2c6u"
+            class="css-luwosv"
             font-family="poppins"
             id="wallet-connect-safepal wallet"
             style="justify-content: space-between;"
@@ -330,7 +330,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-cx2c6u"
+            class="css-luwosv"
             font-family="poppins"
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
@@ -395,7 +395,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-cx2c6u"
+            class="css-luwosv"
             font-family="poppins"
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
@@ -428,7 +428,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-cx2c6u"
+            class="css-luwosv"
             font-family="poppins"
             id="wallet-connect-onto wallet"
             style="justify-content: space-between;"
@@ -480,7 +480,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-cx2c6u"
+            class="css-luwosv"
             font-family="poppins"
             id="wallet-connect-nabox wallet"
             style="justify-content: space-between;"
@@ -527,7 +527,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="css-2pfuf8"
+            class="css-vke1zu"
             font-family="poppins"
             id="wallet-connect-coinbase wallet"
             style="justify-content: space-between;"
@@ -591,7 +591,7 @@ it("renders ConnectModal correctly", () => {
               class="css-w4f2ye"
             >
               <svg
-                class="css-yc605n-External"
+                class="css-1l002ma-External"
                 fill="none"
                 height="auto"
                 viewBox="0 0 11 12"
@@ -635,7 +635,7 @@ it("renders AccountModal correctly", () => {
             class="css-ej7vhs"
           >
             <svg
-              class="css-zmuhgg-Close"
+              class="css-14tbbt8-Close"
               fill="none"
               height="12"
               viewBox="0 0 12 12"
@@ -673,7 +673,7 @@ it("renders AccountModal correctly", () => {
                 class="css-w4f2ye"
               >
                 <svg
-                  class="css-yc605n-External"
+                  class="css-1l002ma-External"
                   fill="none"
                   height="auto"
                   viewBox="0 0 11 12"
@@ -715,7 +715,7 @@ it("renders AccountModal correctly", () => {
             class="css-4cffwv"
           >
             <button
-              class="css-1333is3"
+              class="css-zxshcp"
               font-family="poppins"
             >
               Logout

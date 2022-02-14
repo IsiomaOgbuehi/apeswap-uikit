@@ -10,12 +10,10 @@ it("renders correctly", () => {
         class="css-41n0hu-Progress"
       >
         <div
-          class="css-3yd2i2-Progress"
-          style="width: 0%;"
+          class="css-1m2my81-Progress"
         />
         <div
-          class="css-1ym7usm-Progress"
-          style="width: 0%;"
+          class="css-1te2w3q-Progress"
         />
       </div>
     </DocumentFragment>
