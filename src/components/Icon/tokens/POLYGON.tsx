@@ -1,7 +1,7 @@
 import React from "react";
-import { IconProps, rotation } from "./types";
+import { IconProps } from "../icons/types";
 
-const Polygon: React.FC<IconProps> = ({ width }) => {
+const POLYGON: React.FC<IconProps> = ({ width }) => {
   return (
     <svg width={width || "25"} viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="0.472168" width="24" height="24" rx="12" fill="#6532CE" />
@@ -13,4 +13,4 @@ const Polygon: React.FC<IconProps> = ({ width }) => {
   );
 };
 
-export default Polygon;
+export default POLYGON;

@@ -26,7 +26,7 @@ export const Default = (args: any) => (
 );
 
 Default.args = {
-  icon: "caret",
+  icon: "eth_token",
   color: "brown",
   width: 40,
 };
