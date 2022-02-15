@@ -1,59 +1,21 @@
-import { SwitchNetwork } from "../NetworkModal/types";
-import { Login } from "../WalletModal/types";
+import { iconTypes } from "../../components/IconSVG/types";
 
-export interface LangType {
-  code: string;
-  language: string;
+export interface MenuProps {
+  collapse: boolean;
 }
 
-export interface Profile {
-  name?: string;
-  image?: string;
-  profileLink: string;
-  noProfileLink: string;
-  showPip?: boolean;
-}
-
-export interface PushedProps {
-  isPushed: boolean;
-  pushNav: (isPushed: boolean) => void;
-}
-
-export interface NavTheme {
-  background: string;
-  hover: string;
-}
-
-export interface MenuSubEntry {
+export interface MenuItem {
   label: string;
-  href: string;
-  calloutClass?: string;
+  path?: string;
+  icon?: iconTypes;
+  subMenu?: MenuItem[];
 }
 
-export interface MenuEntry {
-  label: string;
-  icon: string;
-  items?: MenuSubEntry[];
-  href?: string;
-  calloutClass?: string;
-  initialOpenState?: boolean;
+export interface LinkProps {
+  item: MenuItem;
 }
 
-export interface PanelProps {
-  isDark: boolean;
-  toggleTheme: (isDark: boolean) => void;
-  bananaPriceUsd?: number;
-  currentLang: string;
-  langs?: LangType[];
-  setLang: (lang: LangType) => void;
-  links: Array<MenuEntry>;
-}
-
-export interface NavProps extends PanelProps {
-  account?: string;
-  login: Login;
-  profile?: Profile;
-  logout: () => void;
-  chainId: number;
-  switchNetwork: SwitchNetwork;
+export interface MenuContextProps {
+  collapse: boolean;
+  setCollapse: (collapse: boolean) => void;
 }

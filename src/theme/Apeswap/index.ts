@@ -12,6 +12,7 @@ const buttonBaseStyles = {
 
 const Apeswap: Theme = {
   ...baseTheme,
+  breakpoints: ["576px", "852px", "968px"],
   colors: Colors,
   text: {
     heading: {
