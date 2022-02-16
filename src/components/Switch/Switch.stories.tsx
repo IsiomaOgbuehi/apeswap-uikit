@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React from "react";
 import Switch from "./Switch";
 import StorybookLayout from "../StorybookLayout/StorybookLayout";
@@ -15,7 +16,7 @@ export default {
 
 export const Default = (args: any) => (
   <StorybookLayout {...args}>
-    <Switch {...args} />
+    <Switch {...args} labels={["Switch1", "Switch2"]} onChange={() => {}} />
   </StorybookLayout>
 );
 

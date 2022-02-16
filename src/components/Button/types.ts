@@ -1,5 +1,5 @@
-import { ButtonProps as ThemeUIButtonProps } from "theme-ui";
-import { iconTypes } from "../IconSVG/types";
+import { ButtonProps as ThemeUIButtonProps, ThemeUICSSObject } from "theme-ui";
+import { iconTypes } from "../Icon/types";
 import { colorProps } from "../../theme/Apeswap/types";
 
 export enum sizes {
@@ -10,13 +10,13 @@ export enum sizes {
 
 export const buttonFontSizes = {
   [sizes.SMALL]: 1,
-  [sizes.MEDIUM]: [1, 1, 3],
+  [sizes.MEDIUM]: 3,
   [sizes.LARGE]: 6,
 };
 
 export const buttonPadding = {
   [sizes.SMALL]: { x: 7, y: 1 },
-  [sizes.MEDIUM]: { x: [7, 7, 15], y: [1, 1, 4] },
+  [sizes.MEDIUM]: { x: 15, y: 4 },
   [sizes.LARGE]: { x: 16, y: 6 },
 };
 
@@ -38,6 +38,7 @@ export type iconButtonVariantsProps = `${iconButtonVariants}`;
 export interface ButtonProps extends ThemeUIButtonProps {
   variant?: variantProps;
   size?: sizeProps;
+  csx?: ThemeUICSSObject;
   [key: string]: any;
 }
 

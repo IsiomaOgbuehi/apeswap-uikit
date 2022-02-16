@@ -1,7 +1,7 @@
 import React from "react";
 import { Input as ThemeUIInput, Box } from "theme-ui";
 import { InputProps, sizes, iconSizes } from "./types";
-import { IconSVG } from "../IconSVG";
+import { Icon } from "../Icon";
 
 const Input: React.FC<InputProps> = ({ size = sizes.MD, icon, width, sx, ...props }) => {
   return (
@@ -30,7 +30,7 @@ const Input: React.FC<InputProps> = ({ size = sizes.MD, icon, width, sx, ...prop
             right: "15px",
           }}
         >
-          <IconSVG icon={icon} width={iconSizes[size]} />
+          <Icon icon={icon} width={iconSizes[size]} />
         </Box>
       )}
     </Box>

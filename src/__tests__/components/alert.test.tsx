@@ -16,7 +16,6 @@ it("renders correctly", () => {
         >
           <svg
             fill="none"
-            height="auto"
             viewBox="0 0 30 26"
             width="30"
             xmlns="http://www.w3.org/2000/svg"

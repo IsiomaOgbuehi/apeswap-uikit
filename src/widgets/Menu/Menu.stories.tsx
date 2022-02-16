@@ -10,8 +10,8 @@ import MenuBody from "./MenuBody";
 import MenuFooter from "./MenuFooter";
 import MenuContext from "./MenuContext";
 import { MenuItem } from "./types";
-import { icons } from "../../components/IconSVG/types";
-import { IconSVG } from "../../components/IconSVG";
+import { icons } from "../../components/Icon/types";
+import { Icon } from "../../components/Icon";
 
 export default {
   title: "Widgets/Menu",
@@ -121,13 +121,13 @@ export const Default = (args: any) => {
             <MenuFooter>
               <div sx={{ display: "flex", justifyContent: "space-between", ml: "19px", mr: "26px", mb: "70px" }}>
                 <div sx={{ display: "flex", alignItems: "center", columnGap: "8px" }}>
-                  <IconSVG icon="ellipse" />
+                  <Icon icon="ellipse" />
                   <Text sx={{ color: "brown", fontSize: "14px" }} weight="bold">
                     $3.747
                   </Text>
                 </div>
-                <IconSVG icon="ellipse" />
-                <IconSVG icon="ellipse" />
+                <Icon icon="ellipse" />
+                <Icon icon="ellipse" />
               </div>
             </MenuFooter>
           </MenuContainer>

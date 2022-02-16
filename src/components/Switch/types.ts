@@ -1,4 +1,6 @@
-export interface SwitchProps {
+import { InputHTMLAttributes } from "react";
+
+export interface SwitchProps extends InputHTMLAttributes<HTMLInputElement> {
   checked: boolean;
-  onChange?: (state: boolean) => void;
+  labels: [string, string];
 }

@@ -3,4 +3,4 @@ export { default as MenuBody } from "./MenuBody";
 export { default as MenuLink } from "./MenuLink";
 export { default as MenuFooter } from "./MenuFooter";
 
-export type { MenuProps, MenuContextProps, MenuItem, LinkProps } from "./types";
+export type { MenuContextProps, MenuItem, MenuLinkProps } from "./types";

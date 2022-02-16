@@ -27,7 +27,6 @@ export * from "./components/Carousel";
 export * from "./components/TooltipBubble";
 export * from "./components/List";
 export * from "./components/Select";
-export * from "./components/TopMenu";
 
 // Hooks
 export * from "./hooks";

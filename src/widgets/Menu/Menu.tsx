@@ -2,9 +2,8 @@ import React, { useContext } from "react";
 import { Flex } from "theme-ui";
 import MenuContext from "./MenuContext";
 import styles from "./styles";
-import { MenuProps } from "./types";
 
-const Menu: React.FC<MenuProps> = ({ children }) => {
+const Menu: React.FC = ({ children }) => {
   const { collapse } = useContext(MenuContext);
 
   return (

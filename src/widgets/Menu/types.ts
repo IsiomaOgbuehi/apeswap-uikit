@@ -1,8 +1,4 @@
-import { iconTypes } from "../../components/IconSVG/types";
-
-export interface MenuProps {
-  collapse: boolean;
-}
+import { iconTypes } from "../../components/Icon/types";
 
 export interface MenuItem {
   label: string;
@@ -11,7 +7,7 @@ export interface MenuItem {
   subMenu?: MenuItem[];
 }
 
-export interface LinkProps {
+export interface MenuLinkProps {
   item: MenuItem;
 }
 

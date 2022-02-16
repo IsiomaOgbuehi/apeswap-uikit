@@ -12,6 +12,7 @@ it("renders correctly", () => {
         class="css-yo6cuw-Checkbox"
       >
         <input
+          checked=""
           class="css-13u1crr-Checkbox"
           type="checkbox"
         />

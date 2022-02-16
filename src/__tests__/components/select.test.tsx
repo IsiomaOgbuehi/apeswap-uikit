@@ -19,7 +19,6 @@ it("renders correctly", () => {
           <svg
             class="css-1qfiwdz-Caret"
             fill="none"
-            height="auto"
             viewBox="0 0 10 8"
             width="10"
             xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +29,12 @@ it("renders correctly", () => {
             />
           </svg>
         </div>
+        <input
+          aria-hidden="true"
+          class="css-d1yftf-Select"
+          tabindex="-1"
+          value=""
+        />
       </div>
     </DocumentFragment>
   `);

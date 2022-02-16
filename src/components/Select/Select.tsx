@@ -1,15 +1,31 @@
 /** @jsxImportSource theme-ui */
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Box, Flex } from "theme-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { SelectProps, selectPadding, sizes, positions } from "./types";
-import { IconSVG } from "../IconSVG";
+import { Icon } from "../Icon";
 import styles from "./styles";
 
-const Select: React.FC<SelectProps> = ({ children, active, size = sizes.MEDIUM, position = positions.BOTTOM }) => {
+const Select: React.FC<SelectProps> = ({
+  children,
+  active,
+  size = sizes.MEDIUM,
+  position = positions.BOTTOM,
+  ...props
+}) => {
+  const inputRef = useRef<HTMLInputElement>(null);
   const [open, setOpen] = useState(false);
 
   const handleClick = () => setOpen((prev) => !prev);
+
+  const setNativeInput = (val: string) => {
+    const input = inputRef?.current;
+
+    if (input) {
+      Object?.getOwnPropertyDescriptor?.(window.HTMLInputElement.prototype, "value")?.set?.call(input, val);
+      input.dispatchEvent(new Event("change", { bubbles: true }));
+    }
+  };
 
   return (
     <>
@@ -30,7 +46,7 @@ const Select: React.FC<SelectProps> = ({ children, active, size = sizes.MEDIUM, 
               active: true,
             });
           })}
-          <IconSVG icon="caret" direction={open ? "up" : "down"} />
+          <Icon icon="caret" direction={open ? "up" : "down"} />
         </Flex>
         <AnimatePresence>
           {open && (
@@ -46,10 +62,17 @@ const Select: React.FC<SelectProps> = ({ children, active, size = sizes.MEDIUM, 
                 bottom: position === positions.TOP ? 5 : undefined,
               }}
             >
-              {children}
+              {React.Children.map(children, (child) => {
+                return React.cloneElement(child as any, {
+                  ...(child as any)?.props,
+                  active: false,
+                  onClick: () => setNativeInput((child as any)?.props?.value),
+                });
+              })}
             </motion.ul>
           )}
         </AnimatePresence>
+        <input ref={inputRef} value={active || ""} aria-hidden="true" tabIndex={-1} {...props} sx={styles.input} />
       </Box>
       {open && <div aria-hidden="true" onClick={() => setOpen(false)} sx={styles.backdrop} />}
     </>

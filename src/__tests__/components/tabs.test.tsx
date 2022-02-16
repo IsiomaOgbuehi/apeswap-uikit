@@ -11,7 +11,7 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <button
-        class="css-lhccdf"
+        class="css-1wapmyd"
       >
         Tab
       </button>

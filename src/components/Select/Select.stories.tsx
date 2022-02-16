@@ -22,15 +22,15 @@ export default {
 };
 
 export const Default = (args) => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState("item1");
 
   return (
     <StorybookLayout {...args}>
-      <Select active={active} {...args}>
-        <SelectItem value={0} onClick={setActive} {...args}>
+      <Select active={active} {...args} onChange={(e) => setActive(e.target.value)}>
+        <SelectItem value="item1" {...args}>
           <Text sx={{ color: "brown" }}>Item 1 Selected link</Text>
         </SelectItem>
-        <SelectItem value={1} onClick={setActive} {...args}>
+        <SelectItem value="item2" {...args}>
           <Text sx={{ color: "brown" }}>Item 2</Text>
         </SelectItem>
       </Select>

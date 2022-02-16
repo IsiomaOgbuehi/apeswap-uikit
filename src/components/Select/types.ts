@@ -1,4 +1,4 @@
-import React from "react";
+import React, { InputHTMLAttributes } from "react";
 
 export enum positions {
   TOP = "top",
@@ -32,16 +32,17 @@ export const selectItemPadding = {
 type sizeProps = `${sizes}`;
 type positionProps = `${positions}`;
 
-export interface SelectProps {
-  active?: number;
+export interface SelectProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "size"> {
+  active?: number | string;
   size?: sizeProps;
   position?: positionProps;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 export interface SelectItemProps {
-  onClick?: (index: number) => void;
+  onClick?: (value: number | string) => void;
   url?: string;
   active?: boolean;
   size?: sizeProps;
-  value: number;
+  value: number | string;
 }

@@ -40,7 +40,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
 };
 
 export default {
-  title: "Components/Modal",
+  title: "Widgets/Modal",
   component: Modal,
   argTypes: {
     colorMode: {

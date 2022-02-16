@@ -26,6 +26,14 @@ const styles: Record<string, ThemeUIStyleObject> = {
     top: 0,
     left: 0,
   },
+  input: {
+    bottom: 0,
+    left: 0,
+    position: "absolute",
+    opacity: 0,
+    pointerEvents: "none",
+    width: "100%",
+  },
 };
 
 interface Props {
