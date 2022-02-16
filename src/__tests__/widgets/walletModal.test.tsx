@@ -30,7 +30,6 @@ it("renders ConnectModal correctly", () => {
             <svg
               class="css-14tbbt8-Close"
               fill="none"
-              height="12"
               viewBox="0 0 12 12"
               width="12"
               xmlns="http://www.w3.org/2000/svg"
@@ -636,7 +635,6 @@ it("renders AccountModal correctly", () => {
             <svg
               class="css-14tbbt8-Close"
               fill="none"
-              height="12"
               viewBox="0 0 12 12"
               width="12"
               xmlns="http://www.w3.org/2000/svg"
