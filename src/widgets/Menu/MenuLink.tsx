@@ -1,3 +1,5 @@
+/** @jsxImportSource theme-ui */
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Box, Flex, NavLink, Text } from "theme-ui";
@@ -37,7 +39,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ item }) => {
   };
 
   return (
-    <>
+    <Box>
       <Flex
         sx={{
           ...styles.menuLinkContainer,
@@ -62,22 +64,32 @@ const MenuLink: React.FC<MenuLinkProps> = ({ item }) => {
         </NavLink>
       </Flex>
 
-      {subMenu &&
-        open &&
-        subMenu.map((child, i) => {
-          return (
-            <Flex
-              sx={{
-                ...styles.menuLinkContainer,
-                boxShadow: child.path === "pathname" ? "rgb(175, 110, 90) 4px 0px 0px inset" : "",
-              }}
-              key={`${item}-${i + 1}`}
-            >
-              <DropdownLink item={child} />
-            </Flex>
-          );
-        })}
-    </>
+      <AnimatePresence>
+        {subMenu && open && (
+          <motion.div
+            initial={{ height: 0 }}
+            animate={{ height: "fit-content" }}
+            transition={{ height: { duration: 0.3 } }}
+            exit={{ height: 0 }}
+            sx={{ overflow: "hidden" }}
+          >
+            {subMenu.map((child, i) => {
+              return (
+                <Flex
+                  sx={{
+                    ...styles.menuLinkContainer,
+                    boxShadow: child.path === pathname ? "rgb(175, 110, 90) 4px 0px 0px inset" : "",
+                  }}
+                  key={`${item}-${i + 1}`}
+                >
+                  <DropdownLink item={child} />
+                </Flex>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </Box>
   );
 };
 
