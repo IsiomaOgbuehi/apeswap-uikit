@@ -3,6 +3,13 @@ import { ThemeUIStyleObject } from "theme-ui";
 const defaultStyle = {
   padding: "10px",
   border: "none",
+  transition: "all .3s linear",
+  "&:hover": {
+    filter: "brightness(85%)",
+  },
+  "&:active": {
+    transform: "scale(0.9)",
+  },
 };
 
 const styles: Record<string, ThemeUIStyleObject> = {
@@ -22,16 +29,12 @@ const styles: Record<string, ThemeUIStyleObject> = {
   },
   circular: {
     padding: "1px",
-  },
-  flex: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: 4,
-    borderRadius: "normal",
-    cursor: "pointer",
-    padding: "10px 20px 10px 19px",
-    span: {
-      fontWeight: "bold",
+    transition: "all .3s linear",
+    "&:hover": {
+      filter: "brightness(85%)",
+    },
+    "&:active": {
+      transform: "scale(0.9)",
     },
   },
 };
