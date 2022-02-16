@@ -16,6 +16,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     cursor: "pointer",
     minWidth: "100%",
     width: "max-content",
+    overflow: "hidden",
     boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
   },
   backdrop: {

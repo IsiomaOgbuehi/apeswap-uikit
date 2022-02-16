@@ -18,9 +18,12 @@ const Button: React.FC<ButtonProps> = ({
         fontSize: buttonFontSizes[size],
         px: buttonPadding[size].x,
         py: buttonPadding[size].y,
-        transition: "filter .3s filter",
+        transition: "all .3s linear",
         "&:hover": {
           filter: "brightness(85%)",
+        },
+        "&:active": {
+          transform: "scale(0.9)",
         },
         ...sx,
         ...csx,

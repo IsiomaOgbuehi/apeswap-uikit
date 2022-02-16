@@ -28,7 +28,7 @@ it("renders correctly", () => {
           </span>
         </div>
         <button
-          class="css-11jr2qy"
+          class="css-18fdx7q"
         >
           1
         </button>

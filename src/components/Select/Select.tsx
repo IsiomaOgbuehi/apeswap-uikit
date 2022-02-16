@@ -51,15 +51,15 @@ const Select: React.FC<SelectProps> = ({
         <AnimatePresence>
           {open && (
             <motion.ul
-              initial={{ opacity: 0, transform: "scale(0.1)" }}
-              animate={{ opacity: 1, transform: "scale(1.0)" }}
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "fit-content" }}
               transition={{ opacity: { duration: 0.2 } }}
-              exit={{ opacity: 0, transform: "scale(0)" }}
+              exit={{ opacity: 0, height: 0 }}
               sx={{
                 ...styles.ul,
                 zIndex: 10,
-                top: position === positions.BOTTOM ? 5 : undefined,
-                bottom: position === positions.TOP ? 5 : undefined,
+                top: position === positions.BOTTOM ? "calc(100% + 5px)" : undefined,
+                bottom: position === positions.TOP ? "calc(100% + 5px)" : undefined,
               }}
             >
               {React.Children.map(children, (child) => {
