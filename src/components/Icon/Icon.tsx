@@ -27,12 +27,15 @@ import {
   ProfileLight,
   ProfileDark,
   ProfileIcon,
-  Polygon,
-  BSC,
   Logo,
   Hamburger,
   Search,
+  Question,
+  Success,
+  Settings,
+  Chart,
 } from "./icons";
+import { BSC, BANANA, BNB, ETH, GNANA, POLYGON } from "./tokens";
 import { IconStyles } from "./icons/types";
 
 const Icon: React.FC<IconProps> = ({ icon, ...props }) => {
@@ -102,12 +105,6 @@ const Icon: React.FC<IconProps> = ({ icon, ...props }) => {
   if (icon === icons.PROFILEICON) {
     return <ProfileIcon {...props} getStyles={getStyles} />;
   }
-  if (icon === icons.POLYGON) {
-    return <Polygon {...props} getStyles={getStyles} />;
-  }
-  if (icon === icons.BSC) {
-    return <BSC {...props} getStyles={getStyles} />;
-  }
   if (icon === icons.LOGO) {
     return <Logo {...props} getStyles={getStyles} />;
   }
@@ -128,6 +125,36 @@ const Icon: React.FC<IconProps> = ({ icon, ...props }) => {
   }
   if (icon === icons.SEARCH) {
     return <Search {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.SUCCESS) {
+    return <Success {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.QUESTION) {
+    return <Question {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.SETTINGS) {
+    return <Settings {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.CHART) {
+    return <Chart {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.BNB_TOKEN) {
+    return <BNB {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.BANANA_TOKEN) {
+    return <BANANA {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.ETH_TOKEN) {
+    return <ETH {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.GNANA_TOKEN) {
+    return <GNANA {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.POLYGON_TOKEN) {
+    return <POLYGON {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.BSC_TOKEN) {
+    return <BSC {...props} getStyles={getStyles} />;
   }
   return null;
 };

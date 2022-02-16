@@ -1,18 +1,7 @@
 import React from "react";
-import { IconProps, rotation } from "./types";
+import { IconProps } from "../icons/types";
 
-const BSC: React.FC<IconProps> = ({ direction = "down", color = "navMenuLogo", width, getStyles }) => {
-  const deg: rotation = {
-    left: 90,
-    up: 180,
-    right: 270,
-    down: 0,
-  };
-  const style = getStyles({
-    degree: deg[direction as keyof rotation],
-    color,
-  });
-
+const BSC: React.FC<IconProps> = ({ width }) => {
   return (
     <svg width={width || "25"} viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

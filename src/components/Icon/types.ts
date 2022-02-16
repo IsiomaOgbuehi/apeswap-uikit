@@ -25,11 +25,19 @@ export enum icons {
   PROFILELIGHT = "profileLight",
   PROFILEDARK = "profileDark",
   PROFILEICON = "profileIcon",
-  POLYGON = "polygon",
-  BSC = "bsc",
   LOGO = "logo",
   HAMBURGER = "hamburger",
   SEARCH = "search",
+  SUCCESS = "success",
+  QUESTION = "question",
+  SETTINGS = "settings",
+  CHART = "chart",
+  BNB_TOKEN = "bnb_token",
+  BANANA_TOKEN = "banana_token",
+  ETH_TOKEN = "eth_token",
+  GNANA_TOKEN = "gnana_token",
+  POLYGON_TOKEN = "polygon_token",
+  BSC_TOKEN = "bsc_token",
 }
 
 export enum directions {
