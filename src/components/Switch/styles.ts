@@ -27,6 +27,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     top: 0,
     height: "100%",
     width: "50%",
+    fontSize: "14px",
     transition: "left 0.2s linear",
     "&:hover": {
       filter: "none",
