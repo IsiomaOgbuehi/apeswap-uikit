@@ -26,7 +26,6 @@ jobs:
       
       - name: release
         run: |
-          awk -v n=2 -v s='//registry.npmjs.org/:_authToken=${NPM_PUBLISH_TOKEN}' 'NR == n {print s} {print}' .npmrc > tmp && mv tmp .npmrc
           cat .npmrc
           yarn release
         env: 

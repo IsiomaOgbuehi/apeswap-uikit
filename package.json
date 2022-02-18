@@ -32,9 +32,6 @@
       "<rootDir>/src/setupTests.js"
     ]
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
   "devDependencies": {
     "@apeswapfinance/eslint-config-apeswap": "1.0.0",
     "@babel/core": "^7.12.1",
