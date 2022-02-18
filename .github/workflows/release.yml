@@ -26,7 +26,7 @@ jobs:
       
       - name: release
         run: |
-          cat .npmrc
+          yarn config set //registry.npmjs.org/:_authToken ${NPM_PUBLISH_TOKEN}
           yarn release
         env: 
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
