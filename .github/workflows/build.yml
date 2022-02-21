@@ -78,8 +78,7 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
+      - name: Install modules
         run: yarn install --frozen-lockfile
         env: 
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
