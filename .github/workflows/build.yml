@@ -4,7 +4,8 @@ on:
   pull_request:
 
 jobs:
-  lint:
+
+  install_dependecies:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +18,6 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
         with:
@@ -29,14 +29,8 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
-      - name: Run ESLint
-        run: yarn lint
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-
   test:
-    needs: lint
+    needs: install_dependecies
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -47,6 +41,12 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
+      - name: Run ESLint
+        run: yarn lint
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
       - name: Run Jest tests
         run: yarn test
         env:
@@ -54,7 +54,7 @@ jobs:
           NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
   build:
-    needs: test
+    needs: install_dependecies
     runs-on: ubuntu-latest
 
     steps:
