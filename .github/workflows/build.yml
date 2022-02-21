@@ -3,8 +3,59 @@ name: Build
 on:
   pull_request:
 
-
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 14.x
+
+      - name: Install dependencies
+        run: yarn install
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+      - name: Run ESLint
+        run: yarn lint
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Load node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install modules
+        run: yarn
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+      - name: Run Jest tests
+        run: yarn test
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
   build:
     needs: test
     runs-on: ubuntu-latest
