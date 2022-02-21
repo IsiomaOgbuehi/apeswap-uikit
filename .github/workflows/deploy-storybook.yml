@@ -22,11 +22,13 @@ jobs:
         run: yarn install
         env: 
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
       - name: Build Storybook
         run: yarn build-storybook
         env: 
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
       - name: Deploy Storybook
         uses: peaceiris/actions-gh-pages@v3
