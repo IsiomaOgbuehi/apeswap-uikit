@@ -11,7 +11,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/ApeSwapFinance/apeswap-uikit",
+  "repository": "https://github.com/IsiomaOgbuehi/apeswap-uikit",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./dist && rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
