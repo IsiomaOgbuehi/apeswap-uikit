@@ -1,6 +1,6 @@
 {
   "name": "@isioma/uikit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "resolutions": {
@@ -11,7 +11,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/IsiomaOgbuehi/apeswap-uikit",
+  "repository": "https://github.com/ApeSwapFinance/apeswap-uikit",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./dist && rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
@@ -20,7 +20,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "release": "yarn build && np --branch personal-main-v-2"
+    "release": "yarn build && np --any-branch"
   },
   "husky": {
     "hooks": {
@@ -91,7 +91,7 @@
     "lodash": "^4.17.20",
     "react-transition-group": "^4.4.1",
     "styled-system": "^5.1.5",
-    "theme-ui": "^0.13.1",
-    "yalc": "^1.0.0-pre.53"
+    "yalc": "^1.0.0-pre.53",
+    "theme-ui": "^0.13.1"
   }
 }
