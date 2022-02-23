@@ -12,6 +12,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     flexDirection: "column",
     justifyContent: "space-between",
     transition: "width .2s linear",
+    zIndex: 100,
   },
   menuBody: {
     flexDirection: "column",
