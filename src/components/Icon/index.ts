@@ -1,3 +1,4 @@
 export { default as Icon } from "./Icon";
-export type { IconProps } from "./types";
+export type { IconProps, iconTypes } from "./types";
+export { icons } from "./types";
 export * from "./icons";
