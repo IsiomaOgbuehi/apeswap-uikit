@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import { Text } from "../Text";
 import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
@@ -24,16 +23,14 @@ export const Default = (args) => {
 
   return (
     <StorybookLayout {...args}>
-      <Router>
-        <Dropdown {...args} component={<Title />}>
-          <DropdownItem url="/" active {...args}>
-            <Text sx={{ color: "brown" }}>Item 1 Selected link</Text>
-          </DropdownItem>
-          <DropdownItem {...args}>
-            <Text sx={{ color: "brown" }}>Item 2</Text>
-          </DropdownItem>
-        </Dropdown>
-      </Router>
+      <Dropdown {...args} component={<Title />}>
+        <DropdownItem url="/" active {...args}>
+          <Text sx={{ color: "brown" }}>Item 1 Selected link</Text>
+        </DropdownItem>
+        <DropdownItem {...args}>
+          <Text sx={{ color: "brown" }}>Item 2</Text>
+        </DropdownItem>
+      </Dropdown>
     </StorybookLayout>
   );
 };

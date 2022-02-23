@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useContext, useState } from "react";
-import { useLocation } from "react-router-dom";
 import { Box, Flex, NavLink, Text } from "theme-ui";
 import { Icon } from "../../components/Icon";
 import MenuContext from "./MenuContext";
@@ -27,10 +26,9 @@ const DropdownLink: React.FC<MenuLinkProps> = ({ item }) => {
 
 const MenuLink: React.FC<MenuLinkProps> = ({ item }) => {
   const { label, icon, path, subMenu } = item;
-  const { collapse, setCollapse } = useContext(MenuContext);
-  const { pathname } = useLocation();
+  const { active, collapse, setCollapse } = useContext(MenuContext);
 
-  const isActive = item.path === pathname;
+  const isActive = item.path === active;
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -78,7 +76,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ item }) => {
                 <Flex
                   sx={{
                     ...styles.menuLinkContainer,
-                    boxShadow: child.path === pathname ? "rgb(175, 110, 90) 4px 0px 0px inset" : "",
+                    boxShadow: child.path === active ? "rgb(175, 110, 90) 4px 0px 0px inset" : "",
                   }}
                   key={`${item}-${i + 1}`}
                 >

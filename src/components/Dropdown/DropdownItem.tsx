@@ -1,16 +1,15 @@
 /** @jsxImportSource theme-ui */
 import React from "react";
-import { Box } from "theme-ui";
-import { Link } from "react-router-dom";
+import { Box, NavLink } from "theme-ui";
 import { DropdownItemProps, dropdownItemPadding, sizes } from "./types";
 import { dynamicStyles } from "./styles";
 
 const Element: React.FC<DropdownItemProps> = ({ onClick, url, active, size, children }) => {
   const style = dynamicStyles.dropdownItem({ active, size });
   return url ? (
-    <Link to={url} onClick={onClick} sx={style}>
+    <NavLink href={url} onClick={onClick} sx={style}>
       {children}
-    </Link>
+    </NavLink>
   ) : (
     <Box onClick={onClick} sx={style}>
       {children}

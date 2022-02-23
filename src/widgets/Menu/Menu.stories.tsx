@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /** @jsxImportSource theme-ui */
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
 import { Text } from "../../components/Text";
 import MenuLink from "./MenuLink";
@@ -110,28 +109,26 @@ export const Default = (args: any) => {
           setCollapse: () => {},
         }}
       >
-        <BrowserRouter>
-          <MenuContainer {...args}>
-            <MenuBody>
-              {sideMenu.map((item, index) => (
-                <MenuLink item={item} key={`${item}-${index + 1}`} />
-              ))}
-            </MenuBody>
+        <MenuContainer {...args}>
+          <MenuBody>
+            {sideMenu.map((item, index) => (
+              <MenuLink item={item} key={`${item}-${index + 1}`} />
+            ))}
+          </MenuBody>
 
-            <MenuFooter>
-              <div sx={{ display: "flex", justifyContent: "space-between", ml: "19px", mr: "26px", mb: "70px" }}>
-                <div sx={{ display: "flex", alignItems: "center", columnGap: "8px" }}>
-                  <Icon icon="ellipse" />
-                  <Text sx={{ color: "brown", fontSize: "14px" }} weight="bold">
-                    $3.747
-                  </Text>
-                </div>
+          <MenuFooter>
+            <div sx={{ display: "flex", justifyContent: "space-between", ml: "19px", mr: "26px", mb: "70px" }}>
+              <div sx={{ display: "flex", alignItems: "center", columnGap: "8px" }}>
                 <Icon icon="ellipse" />
-                <Icon icon="ellipse" />
+                <Text sx={{ color: "brown", fontSize: "14px" }} weight="bold">
+                  $3.747
+                </Text>
               </div>
-            </MenuFooter>
-          </MenuContainer>
-        </BrowserRouter>
+              <Icon icon="ellipse" />
+              <Icon icon="ellipse" />
+            </div>
+          </MenuFooter>
+        </MenuContainer>
       </MenuContext.Provider>
     </StorybookLayout>
   );
