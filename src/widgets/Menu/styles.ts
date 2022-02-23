@@ -13,6 +13,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     justifyContent: "space-between",
     transition: "width .2s linear",
     zIndex: 100,
+    boxShadow: "rgb(0 0 0 / 16%) 0px 1px 10px",
   },
   menuBody: {
     flexDirection: "column",
