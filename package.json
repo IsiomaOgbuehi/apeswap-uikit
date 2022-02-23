@@ -1,6 +1,6 @@
 {
   "name": "@isioma/uikit",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "resolutions": {
@@ -20,7 +20,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "release": "yarn build && np --any-branch"
+    "release": "yarn build && np --branch personal-main-v-2"
   },
   "husky": {
     "hooks": {
