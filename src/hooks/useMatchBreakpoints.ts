@@ -40,7 +40,7 @@ const useMatchBreakpoints = (): State => {
   const [state, setState] = useState<State>(() => {
     return Object.keys(mediaQueries).reduce((accum, size) => {
       const key = getKey(size);
-      const mql = typeof window === "object" ? window.matchMedia(mediaQueries[size]) : {} as any;
+      const mql = typeof window === "object" ? window.matchMedia(mediaQueries[size]) : ({} as any);
       return { ...accum, [key]: mql?.matches || false };
     }, {});
   });
@@ -48,7 +48,7 @@ const useMatchBreakpoints = (): State => {
   useEffect(() => {
     // Create listeners for each media query returning a function to unsubscribe
     const handlers = Object.keys(mediaQueries).map((size) => {
-      const mql = typeof window === "object" ? window.matchMedia(mediaQueries[size]) : {} as any;
+      const mql = typeof window === "object" ? window.matchMedia(mediaQueries[size]) : ({} as any);
 
       const handler = (matchMediaQuery: MediaQueryListEvent) => {
         const key = getKey(size);
