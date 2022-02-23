@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - main-v-2
+      - personal-main-v-2
 
 jobs:
   release:
